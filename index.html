@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gem Tools Shop Sri Lanka</title>
+  <style>
+    body{margin:0;font-family:Arial;background:#0b0b0b;color:#fff}
+    header{padding:22px 18px;background:#000;position:sticky;top:0}
+    header h1{margin:0;font-size:22px;letter-spacing:1px}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .hero{background:linear-gradient(135deg,#111,#1b1b1b);border-radius:14px;padding:26px;margin-top:16px}
+    .hero h2{margin:0 0 8px 0;font-size:28px}
+    .hero p{margin:0;opacity:.85}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+    .card{background:#141414;border:1px solid #222;border-radius:14px;padding:16px;text-align:left}
+    .badge{display:inline-block;background:#1f1f1f;border:1px solid #2a2a2a;padding:6px 10px;border-radius:999px;font-size:12px;opacity:.9}
+    .price{font-size:18px;margin:10px 0 12px 0}
+    button{width:100%;padding:12px 14px;border:0;border-radius:12px;background:gold;font-weight:700;cursor:pointer}
+    button:hover{filter:brightness(.95)}
+    footer{padding:22px 18px;text-align:center;opacity:.7}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>💎 GEM TOOLS SHOP • Sri Lanka</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="hero">
+      <span class="badge">Fast Delivery • Cash on Delivery (optional)</span>
+      <h2>Professional Gem Tools for Daily Use</h2>
+      <p>Order easily via WhatsApp. Trusted tools for gem testing, cutting & measuring.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span class="badge">Best Seller</span>
+        <h3>10x Jeweler Loupe</h3>
+        <p>Clear magnification, strong build, portable.</p>
+        <div class="price">Rs. 2,500</div>
+        <button onclick="order('10x Jeweler Loupe')">Order on WhatsApp</button>
+      </div>
+
+      <div class="card">
+        <span class="badge">Accurate</span>
+        <h3>Digital Gem Scale (0.01g)</h3>
+        <p>High precision for stones & jewelry.</p>
+        <div class="price">Rs. 4,500</div>
+        <button onclick="order('Digital Gem Scale 0.01g')">Order on WhatsApp</button>
+      </div>
+
+      <div class="card">
+        <span class="badge">Premium</span>
+        <h3>Gemstone Tweezers</h3>
+        <p>Strong grip, safe handling for stones.</p>
+        <div class="price">Rs. 1,800</div>
+        <button onclick="order('Gemstone Tweezers')">Order on WhatsApp</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © <span id="y"></span> Gem Tools Shop • Sri Lanka
+  </footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // ✅ මෙතන WhatsApp number එක දාන්න (94XXXXXXX)
+  const WHATSAPP = "94771970424";
+
+  function order(product){
+    const msg = encodeURIComponent("Hello! I want to order: " + product + ". Please send details.");
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + msg, "_blank");
+  }
+</script>
+</body>
+</html>
